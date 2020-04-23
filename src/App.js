@@ -25,7 +25,7 @@ class App extends Component{
         this.setState({
           turn : this.state.turn == 'X'? 'O':'X',
           board:this.state.board,
-          totalMoves:this.state.totalMoves++
+          totalMoves:this.state.totalMoves+1
         }) 
       }}
       var result = this.checkWinner ()
@@ -70,7 +70,7 @@ class App extends Component{
             return board[moves[i][0]];
           }
         }
-        if(this.state.totalMoves == 9)
+        if(this.state.totalMoves == 8)
         {
           return 'draw'
         }
